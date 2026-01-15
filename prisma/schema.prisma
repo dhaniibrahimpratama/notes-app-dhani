@@ -4,7 +4,7 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
+  provider = "postgresql" // DULUNYA "sqlite", GANTI JADI INI
   url      = env("DATABASE_URL")
 }
 
