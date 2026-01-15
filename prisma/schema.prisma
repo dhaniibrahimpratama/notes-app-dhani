@@ -1,0 +1,15 @@
+generator client {
+  provider = "prisma-client-js"
+  // Hapus baris output, biarkan default
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Note {
+  id        Int      @id @default(autoincrement())
+  content   String
+  createdAt DateTime @default(now())
+}
